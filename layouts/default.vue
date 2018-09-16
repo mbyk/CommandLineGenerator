@@ -1,10 +1,24 @@
 <template>
   <div>
-    <nuxt/>
+		<div id="generator">
+			<nuxt/>
+		</div>
   </div>
 </template>
 
 <style>
+
+body {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+#generator {
+	height: 100vh;
+}
+
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;

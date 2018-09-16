@@ -1,25 +1,20 @@
 <template>
-  <section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">
-        command-line-generator
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
-    </div>
-  </section>
+	<div id="generator-container">
+		<div class="historyPaneWrap">
+		</div>
+		<div class="editorWrap">
+			<div class="toolbar">
+			</div>
+			<div class="contentPane">
+				<div class="envPane">
+				</div>
+				<div class="commandPane">
+				</div>
+			</div>
+			<div class="resultPane">
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -50,16 +45,62 @@ export default {
   letter-spacing: 1px;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.historyPaneWrap {
+	width: 300px;
+	background-color: red;
+//	display: none;
 }
 
-.links {
-  padding-top: 15px;
+.editorWrap {
+	background-color: green;
+	//width: calc(100%-300px);
+//	width: 400px;
+	height: 100%;
+	display: flex;
+	flex: 1;
+	flex-direction: column
 }
+
+.toolbar {
+	height: 70px;
+	width: 100%;
+	background-color: blue;
+}
+
+.contentPane {
+	width: 100%;
+	background-color: white;
+	flex: 1;
+	display: flex;
+}
+
+.envPane {
+	width: 50%;
+	height: 100%;
+	background-color: yellow;
+}
+
+.commandPane {
+	width: 50%;
+	height: 100%;
+	background-color: gray;
+}
+
+.resultPane {
+	height: 200px;
+	width: 100%;
+	background-color: orange;
+}
+
+#generator-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+  background-color: orange;
+}
+
 </style>
 
