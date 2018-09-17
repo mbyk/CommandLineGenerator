@@ -83,6 +83,7 @@ export default {
 .historyItem:hover {
 	background-color: #fc636b;
 	color: white;
+	cursor: pointer;
 }
 
 .headerLeft {
