@@ -1,9 +1,10 @@
 <template>
 	<div id="generator-container">
-		<div class="historyPaneWrap">
+		<div id="historyPaneWrap">
 		</div>
 		<div class="editorWrap">
 			<div class="toolbar">
+				<toolbar/>	
 			</div>
 			<div class="contentPane">
 				<div class="envPane">
@@ -19,10 +20,12 @@
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
+import Toolbar from '~/components/Toolbar.vue'
 
 export default {
   components: {
-    AppLogo
+    AppLogo,
+    Toolbar,
   }
 }
 </script>
@@ -45,10 +48,10 @@ export default {
   letter-spacing: 1px;
 }
 
-.historyPaneWrap {
+#historyPaneWrap {
 	width: 300px;
 	background-color: red;
-//	display: none;
+  display: none;
 }
 
 .editorWrap {
