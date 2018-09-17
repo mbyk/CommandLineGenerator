@@ -7,7 +7,7 @@
 				History
 			</div>
 			<div class="headerRight">
-				<img src="~/assets/cross_hoso.svg" width="30" height="30" class="close"/>
+				<img src="~/assets/cross_hoso.svg" width="30" height="30" class="close" @click="$store.commit('closeHistory')"/>
 			</div>
 		</div>
 		<div class="historyList">

@@ -6,7 +6,7 @@
 		<div id="runButton">
 			<img src="~/assets/133_arr_hoso.svg"/>	
 		</div>
-		<div id="historyButton" @click="toggleHistory">
+		<div id="historyButton" @click="$store.commit('toggleHistory')">
 			history	
 		</div>
 		<div id="clearButton">
@@ -22,22 +22,10 @@ export default {
 
 	data() {
 		return {
-			isHistoryOpened: false
 		}
 	},
 
 	methods: {
-		toggleHistory: function() {
-			const historyPaneWrap = document.getElementById('historyPaneWrap');
-			if (this.isHistoryOpened) {
-				this.isHistoryOpened = false;
-				historyPaneWrap.style.display = "none";
-			} else {
-				this.isHistoryOpened = true;
-				historyPaneWrap.style.display = "block";
-			}
-
-		}
 	}
 }
 
