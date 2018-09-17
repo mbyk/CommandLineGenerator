@@ -1,6 +1,7 @@
 <template>
 	<div id="generator-container">
 		<div id="historyPaneWrap">
+			<history/>
 		</div>
 		<div class="editorWrap">
 			<div class="toolbar">
@@ -8,24 +9,33 @@
 			</div>
 			<div class="contentPane">
 				<div class="envPane">
+					<env-editor/>
 				</div>
 				<div class="commandPane">
+					<command-editor/>
 				</div>
 			</div>
 			<div class="resultPane">
+				<result/>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import History from '~/components/History.vue'
 import Toolbar from '~/components/Toolbar.vue'
+import EnvEditor from '~/components/EnvEditor.vue'
+import CommandEditor from '~/components/CommandEditor.vue'
+import Result from '~/components/Result.vue'
 
 export default {
   components: {
-    AppLogo,
+    History,
     Toolbar,
+    EnvEditor,
+    CommandEditor,
+    Result,
   }
 }
 </script>
@@ -50,14 +60,11 @@ export default {
 
 #historyPaneWrap {
 	width: 300px;
-	background-color: red;
+	border-right: 1px solid #d7d7d8;
   display: none;
 }
 
 .editorWrap {
-	background-color: green;
-	//width: calc(100%-300px);
-//	width: 400px;
 	height: 100%;
 	display: flex;
 	flex: 1;
@@ -72,27 +79,26 @@ export default {
 
 .contentPane {
 	width: 100%;
-	background-color: white;
 	flex: 1;
 	display: flex;
+	border-top: 1px solid #d7d7d8;
+	border-bottom: 1px solid #d7d7d8;
 }
 
 .envPane {
 	width: 50%;
 	height: 100%;
-	background-color: yellow;
+	border-right: 1px solid #d7d7d8;
 }
 
 .commandPane {
 	width: 50%;
 	height: 100%;
-	background-color: gray;
 }
 
 .resultPane {
 	height: 200px;
 	width: 100%;
-	background-color: orange;
 }
 
 #generator-container {
@@ -102,7 +108,6 @@ export default {
   margin: 0;
   overflow: hidden;
   width: 100%;
-  background-color: orange;
 }
 
 </style>

@@ -3,10 +3,10 @@
 		<div id="appLogo">
 			CommandLine Generator		
 		</div>
-		<div id="runButton" @click="toggleHistory">
+		<div id="runButton">
 			<img src="~/assets/133_arr_hoso.svg"/>	
 		</div>
-		<div id="historyButton">
+		<div id="historyButton" @click="toggleHistory">
 			history	
 		</div>
 		<div id="clearButton">
@@ -93,4 +93,3 @@ export default {
 }
 
 </style>
-
