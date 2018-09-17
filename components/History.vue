@@ -11,6 +11,11 @@
 			</div>
 		</div>
 		<div class="historyList">
+			<div class="historyItemWrapper">
+				<div class="historyItem" v-for="i in 12" v-bind:key="i">
+					command {{ i }} 	
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -48,8 +53,36 @@ export default {
 
 .historyList {
 	width: 100%;
-	flex: 1;
 	border-top: 1px solid #d7d7d8;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+	position: relative;
+}
+
+.historyItemWrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.historyItem {
+	width: 100%;
+	height: 60px;
+	border-bottom: 1px solid #d7d7d8;
+	padding: 10px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	display: flex;
+	align-items: center;
+}
+
+.historyItem:hover {
+	background-color: #fc636b;
+	color: white;
 }
 
 .headerLeft {
