@@ -29,6 +29,7 @@ export default {
 		var editor = ace.edit("editor");
 		editor.setTheme("ace/theme/tommorrow");
 		editor.session.setMode("ace/mode/json");
+		editor.setShowPrintMargin(false);
 	}
 }
 
